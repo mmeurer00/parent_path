@@ -1,7 +1,6 @@
 import React from 'react';
 
-class Login extends React.Component {
-  render() {
+const Login = () => {
     return (
       <form>
         <h1>Login</h1>
@@ -16,7 +15,6 @@ class Login extends React.Component {
         <input type="submit" value="Login" />
       </form>
     );
-  }
 }
 
 export default Login; 
