@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Resource from './components/Resource';
 import Community from './components/Community';
+import Favorite from './components/Favorite';
 import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -14,10 +15,11 @@ ReactDOM.render(
   <Router>
     <div>
       <Navbar />
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/resource" component={Resource} />
         <Route exact path="/community" component={Community} />
+        <Route exact path="/favorites" component={Favorite} />
     </div>
   </Router>,
   document.getElementById('root')
