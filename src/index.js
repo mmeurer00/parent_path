@@ -1,27 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk'
 import './index.css';
 import App from './App';
-import Home from './components/Home';
-import Login from './components/Login';
-import Resource from './components/Resource';
-import Community from './components/Community';
-import Favorite from './components/Favorite';
-import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import reducers from './reducers/index.js'
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const enhancers = composeEnhancers(applyMiddleware(thunk))
+
+const store = createStore(reducers, {}, enhancers)
 
 ReactDOM.render(
-  <Router>
-    <div>
-      <Navbar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/resource" component={Resource} />
-        <Route exact path="/community" component={Community} />
-        <Route exact path="/favorites" component={Favorite} />
-    </div>
-  </Router>,
+  <Provider store={store}>
+    <App />
+  </Provider>, 
   document.getElementById('root')
 );
 
