@@ -17,9 +17,12 @@ class Resource extends React.Component {
     }
 
     render(){
+
         const resourceCards = this.state.resources.map(resource => <ResourceCard key={resource.name} resource={resource}/>)
+        
         return (
             <div>
+                <h1>Resources</h1>
                 {resourceCards}
             </div>
         )
