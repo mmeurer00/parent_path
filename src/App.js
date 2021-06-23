@@ -2,7 +2,8 @@ import React from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
 import Resource from './components/Resource';
-import resources from './resource_data'
+import DisplayResource from './components/DisplayResource';
+import resources from './resource_data.js'
 import Community from './components/Community';
 import Favorite from './components/Favorite';
 import Navbar from './components/Navbar';
@@ -32,11 +33,12 @@ render(){
       <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
-      {/* <Route exact path="/resource" component={Resource}/> */}
+      <Route exact path="/resource" component={(routeInfo) => (<Resource routeInfo={routeInfo} resources={this.state.resources}/>)}/>
       <Route exact path="/community" component={Community} />
       <Route exact path="/favorites" component={Favorite} />
     </Router>
-    <Resource resources={this.state.resources}/>
+    {/* <Resource resources={this.state.resources}/> */}
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

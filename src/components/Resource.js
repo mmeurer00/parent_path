@@ -1,20 +1,7 @@
 import React from 'react';
-// import resources from '../resource_data'
 import ResourceCard from './ResourceCard'
 
-const Resource = ({resources}) => {
-    // constructor(){
-    //     super()
-    //     this.state = {
-    //         resources: []
-    //     }
-    // }
-
-    // componentDidMount(){
-    //     this.setState({
-    //         resources: resources
-    //     })
-    // }
+const Resource = ({resources, routeInfo}) => {
 
     const resourceCards = resources.map(resource => <ResourceCard key={resource.name} resource={resource}/>)
         
@@ -22,6 +9,7 @@ const Resource = ({resources}) => {
             <div>
                 <h1>Resources</h1>
                 {resourceCards}
+                {/* <button onClick={() => (routeInfo.history.push("/"))}>Go Back</button> */}
             </div>
         )
 }
