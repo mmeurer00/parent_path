@@ -1,5 +1,4 @@
 import React from 'react';
-import posts from '../post_data'
 import PostCard from './PostCard'
 
 class Post extends React.Component {
@@ -11,9 +10,9 @@ class Post extends React.Component {
     }
 
     componentDidMount(){
-        this.setState({
-            posts: posts
-        })
+        fetch("http://127.0.0.1:3000/posts")
+        .then(r => r.json())
+        .then(posts => this.setState({posts: posts}))
     }
 
     render(){
