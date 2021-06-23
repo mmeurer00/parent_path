@@ -21,9 +21,12 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-      this.setState({
-          resources: resources
-      })
+      fetch("http://127.0.0.1:3000/resources")
+      .then(r=>r.json())
+      .then(resources => this.setState({resources: resources}))
+      // this.setState({
+      //     resources: resources
+      // })
   }
 
 render(){
