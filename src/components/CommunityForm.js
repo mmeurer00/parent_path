@@ -15,6 +15,7 @@ class CommunityForm extends React.Component {
 
     handleChange = (e) => {
         this.setState({
+            ...this.state.formInput,
             [e.target.name]: e.target.value
         })
     }
