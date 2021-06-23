@@ -28,23 +28,6 @@ class CommunityForm extends React.Component {
     handleFormSubmit = (event, formInput) => {
         event.preventDefault()
         console.log(event.target)
-
-        // const headers = {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type":"application/json"
-                
-        //     },
-        //     body: JSON.stringify(formInput)
-        // }
-
-        // fetch("http://127.0.0.1:3000/posts", headers)
-        //     .then(r => r.json())
-        //     .then(post => {
-        //         this.setState({
-        //             posts: [...this.state.posts, post]
-        //         })
-        //     })
        this.props.addPost(formInput)
     }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import PostCard from './PostCard'
+import { connect } from 'react-redux'
+import { fetchPosts } from '../redux/postSlice'
 
 class Post extends React.Component {
     constructor(){
@@ -10,9 +12,9 @@ class Post extends React.Component {
     }
 
     componentDidMount(){
-        fetch("http://127.0.0.1:3000/posts")
-        .then(r => r.json())
-        .then(posts => this.setState({posts: posts}))
+        this.setState = ({
+            posts: []
+        })
     }
 
     render(){
@@ -27,4 +29,18 @@ class Post extends React.Component {
     }
 }
 
-export default Post
+const mapDispatchToProps = (dispatch) => {
+    return {
+      loadPosts: () => {
+          dispatch(fetchPosts())
+      }  
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Post)
