@@ -20,20 +20,40 @@ class CommunityForm extends React.Component {
         })
     }
 
+    handleFormSubmit = (event) => {
+        event.preventDefault()
+        console.log("working for submit!")
+    }
+
     render(){
         return (
-        <form >
+        <form onSubmit={this.handleFormSubmit}>
             <h2>Make a post!</h2>
             <div>
-                <input type="text" name="title" placeholder="Title" onChange={this.handleChange} />
+                <input
+                    type="text" 
+                    name="title" 
+                    placeholder="Title"
+                    onChange={this.handleChange}
+                    value={this.state.formInput.title} />
                 <label htmlFor="title">Title</label>
             </div>
             <div>
-                <input type="tag" name="tag" placeholder="tag" onChange={this.handleChange} />
+                <input 
+                    type="tag" 
+                    name="tag" 
+                    placeholder="tag" 
+                    onChange={this.handleChange} 
+                    value={this.state.formInput.tag}/>
                 <label htmlFor="tag">Tag</label>
             </div>
             <div>
-            <input type="content" name="content" placeholder="content" onChange={this.handleChange}/>
+            <input 
+                type="content" 
+                name="content" 
+                placeholder="content" 
+                onChange={this.handleChange}
+                value={this.state.formInput.content}/>
             <label htmlFor="content">Content</label>
             </div>
             <input type="submit" value="Create Post" />
