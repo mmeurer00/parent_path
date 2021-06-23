@@ -3,7 +3,7 @@ import ResourceCard from './ResourceCard'
 
 const Resource = ({resources, routeInfo}) => {
 
-    const resourceCards = resources.map(resource => <ResourceCard key={resource.name} resource={resource}/>)
+    const resourceCards = resources.map(resource => <ResourceCard key={resource.id} resource={resource}/>)
         
         return (
             <div>

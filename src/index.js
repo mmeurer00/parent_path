@@ -7,12 +7,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import reducers from './reducers/index.js'
+import store from './redux/store.js'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const enhancers = composeEnhancers(applyMiddleware(thunk))
+// const enhancers = composeEnhancers(applyMiddleware(thunk))
 
-const store = createStore(reducers, {}, enhancers)
+// const store = createStore(reducers, {}, enhancers)
+
+
 
 ReactDOM.render(
   <Provider store={store}>

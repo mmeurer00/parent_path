@@ -1,4 +1,6 @@
 import React from 'react';
+import { createPosts } from '../redux/postSlice'
+import { connect } from 'react-redux'
 
 class CommunityForm extends React.Component {
     constructor(){
@@ -9,25 +11,46 @@ class CommunityForm extends React.Component {
                 content: "",
                 tag: "",
                 location: "",
-                user_id: 1    }
+                user_id: 1    },
+            posts: []
         }
     }
 
     handleChange = (e) => {
         this.setState({
+            formInput: {
             ...this.state.formInput,
             [e.target.name]: e.target.value
+            }
         })
     }
 
-    handleFormSubmit = (event) => {
+    handleFormSubmit = (event, formInput) => {
         event.preventDefault()
-        console.log("working for submit!")
+        console.log(event.target)
+
+        // const headers = {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type":"application/json"
+                
+        //     },
+        //     body: JSON.stringify(formInput)
+        // }
+
+        // fetch("http://127.0.0.1:3000/posts", headers)
+        //     .then(r => r.json())
+        //     .then(post => {
+        //         this.setState({
+        //             posts: [...this.state.posts, post]
+        //         })
+        //     })
+       this.props.addPost(formInput)
     }
 
     render(){
         return (
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={(event) => this.handleFormSubmit(event, this.state.formInput)}>
             <h2>Make a post!</h2>
             <div>
                 <input
@@ -62,4 +85,13 @@ class CommunityForm extends React.Component {
     }
 }
 
-export default CommunityForm; 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: (formInput) => {
+            dispatch(createPosts(formInput))
+        }
+    }
+}
+
+ 
+export default connect(null, mapDispatchToProps)(CommunityForm)
