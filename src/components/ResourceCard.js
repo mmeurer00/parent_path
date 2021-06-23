@@ -4,6 +4,7 @@ const ResourceCard = ({resource}) => {
     return (
         <div>
             {resource.name}
+            <button>Favorite</button>
         </div>
     )
 }

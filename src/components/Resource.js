@@ -1,24 +1,22 @@
 import React from 'react';
-import resources from '../resource_data'
+// import resources from '../resource_data'
 import ResourceCard from './ResourceCard'
 
-class Resource extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            resources: []
-        }
-    }
+const Resource = ({resources}) => {
+    // constructor(){
+    //     super()
+    //     this.state = {
+    //         resources: []
+    //     }
+    // }
 
-    componentDidMount(){
-        this.setState({
-            resources: resources
-        })
-    }
+    // componentDidMount(){
+    //     this.setState({
+    //         resources: resources
+    //     })
+    // }
 
-    render(){
-
-        const resourceCards = this.state.resources.map(resource => <ResourceCard key={resource.name} resource={resource}/>)
+    const resourceCards = resources.map(resource => <ResourceCard key={resource.name} resource={resource}/>)
         
         return (
             <div>
@@ -26,7 +24,6 @@ class Resource extends React.Component {
                 {resourceCards}
             </div>
         )
-    }
 }
 
 export default Resource

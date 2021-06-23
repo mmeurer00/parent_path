@@ -4,6 +4,7 @@ const PostCard = ({post}) => {
     return (
         <div>
             {post.title}
+            <button>Favorite</button>
         </div>
     )
 }
