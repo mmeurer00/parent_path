@@ -3,8 +3,8 @@ import { createPosts } from '../redux/postSlice'
 import { connect } from 'react-redux'
 
 class CommunityForm extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             formInput: {
                 title: "",
