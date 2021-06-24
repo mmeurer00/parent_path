@@ -2,7 +2,6 @@ import React from 'react';
 import PostCard from './PostCard'
 import { connect } from 'react-redux'
 import { fetchPosts } from '../redux/postSlice'
-import { todoComponent} from "./styles"
 
 class Post extends React.Component {
 
@@ -12,7 +11,7 @@ class Post extends React.Component {
 
     render(){
         
-        const PostCards = this.props.posts.map(post => <PostCard key={post.title} post={post}/>)
+        const PostCards = this.props.posts.map(post => <PostCard key={post.title} post={post} />)
         
         return (
             <div>

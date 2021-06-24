@@ -33,7 +33,7 @@ class CommunityForm extends React.Component {
 
     render(){
         return (
-        <form onSubmit={(event) => this.handleFormSubmit(event, this.state.formInput)}>
+        <form className="form" onSubmit={(event) => this.handleFormSubmit(event, this.state.formInput)}>
             <h2>Make a post!</h2>
             <div>
                 <input
