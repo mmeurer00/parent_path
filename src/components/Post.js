@@ -11,10 +11,12 @@ class Post extends React.Component {
 
     render(){
         
-        const PostCards = this.props.posts.map(post => <PostCard key={post.title} post={post} />)
+        const PostCards = this.props.posts.map(post => <PostCard key={post.title} post={post}/>)
         
         return (
             <div>
+                <button>Top Posts</button>
+                search tags
                 {PostCards}
             </div>
         )

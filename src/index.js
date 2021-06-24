@@ -6,8 +6,7 @@ import thunk from 'redux-thunk'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import reducers from './reducers/index.js'
-import store from './redux/store.js'
+import store from './redux/store'
 
 // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
