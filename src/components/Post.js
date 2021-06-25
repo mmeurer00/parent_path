@@ -11,7 +11,7 @@ class Post extends React.Component {
 
     render(){
         
-        const PostCards = this.props.posts.map(post => <PostCard key={post.title} post={post}/>)
+        const PostCards = this.props.posts.map(post => <PostCard key={post.id} post={post}/>)
         
         return (
             <div>
@@ -38,3 +38,11 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post)
+
+
+
+// handleFavorite = (event, post) => {
+//     event.preventDefault()
+//     console.log(event.target)
+//    this.props.addFavorite(post)
+// }

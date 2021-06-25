@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import FavoriteDisplay from './components/FavoriteDisplay';
 
 class App extends React.Component {
 
@@ -38,7 +39,7 @@ render(){
       <Route exact path="/login" component={Login} />
       <Route exact path="/resource" component={(routeInfo) => (<Resource routeInfo={routeInfo} resources={this.state.resources}/>)}/>
       <Route exact path="/community" component={Community} />
-      <Route exact path="/favorites" component={Favorite} />
+      <Route exact path="/favorites" component={FavoriteDisplay} />
     </Router>
     {/* <Resource resources={this.state.resources}/> */}
 
