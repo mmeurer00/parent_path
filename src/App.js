@@ -40,7 +40,7 @@ render(){
       <Route exact path="/resource" component={Resource} />
       {/* <Route exact path="/resource" component={(routeInfo) => (<Resource routeInfo={routeInfo} resources={this.state.resources}/>)}/> */}
       <Route exact path="/community" component={Community} />
-      <Route exact path="/favorites" component={FavoriteDisplay} />
+      <Route exact path="/favorites" component={Favorite} />
     </Router>
     {/* <Resource resources={this.state.resources}/> */}
 

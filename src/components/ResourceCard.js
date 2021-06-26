@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createFavoriteResources } from '../redux/resourceSlice'
+import { createFavoriteResources } from '../redux/favoriteSlice'
 
 
 class ResourceCard extends React.Component {

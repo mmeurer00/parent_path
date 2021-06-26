@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createFavoritePosts } from '../redux/postSlice'
+import { createFavoritePosts } from '../redux/favoriteSlice'
 
 class PostCard extends React.Component {
 

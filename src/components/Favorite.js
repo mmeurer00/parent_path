@@ -1,7 +1,19 @@
 import React from 'react';
+import styled from 'styled-components'
+import FavoriteDisplay from './FavoriteDisplay'
+
+const Title = styled.h1`
+    color: blue;
+    font-size: 2rem;
+`
 
 const Favorite = () => {
-    return <h1>Favorites!</h1>
+    return (
+    <>
+    <Title>Favorites!</Title>
+    <FavoriteDisplay />
+    </>
+    )
 
 }
 
