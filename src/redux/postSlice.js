@@ -116,4 +116,4 @@ console.log(postSlice)
 export  const {startLoading, endLoading} = postSlice.actions
 export default postSlice.reducer 
 export  const {startLoadingFavorites, endLoadingFavorites} = favoritePostSlice.actions
-export const favoriteReducer = favoritePostSlice.reducer
+export const favoritePostsReducer = favoritePostSlice.reducer

@@ -1,12 +1,33 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
+import { createFavoriteResources } from '../redux/resourceSlice'
 
-const ResourceCard = ({resource}) => {
-    return (
-        <div>
-            {resource.name}
-            <button>Favorite</button>
-        </div>
-    )
+
+class ResourceCard extends React.Component {
+
+    handleFavoriteClick = (event) => {
+        event.preventDefault()
+       this.props.addFavoriteResource(this.props.resource)
+    }
+
+    render(){
+        return (
+            <div>
+                {this.props.resource.name}
+                <button onClick={this.handleFavoriteClick} >Favorite</button>
+            </div>
+        )
+    }
 }
 
-export default ResourceCard
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addFavoriteResource: (resource) => {
+            dispatch(createFavoriteResources(resource))
+        }
+    }
+}
+
+ 
+export default connect(null, mapDispatchToProps)(ResourceCard)
+

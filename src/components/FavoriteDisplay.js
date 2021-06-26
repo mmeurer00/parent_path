@@ -1,22 +1,27 @@
 import React from 'react'
 import FavoriteCard from './FavoriteCard'
 import { fetchFavoritePosts } from '../redux/postSlice'
+import { fetchFavoriteResources } from '../redux/resourceSlice'
 import { connect } from 'react-redux'
 
 class FavoriteDisplay extends React.Component {
 
     componentDidMount(){
-        console.log("hey!asdfasfsfasdf")
+        this.props.loadFavorites()
         this.props.loadFavorites()
     }
 
     render(){
 
-        const FavoriteCards = this.props.favorites.map(favorite => <FavoriteCard key={favorite.id} favorite={favorite}/>)
+        const FavoritePostCards = this.props.favoritePosts.map(favorite => <FavoriteCard key={favorite.id} favorite={favorite}/>)
+        const FavoriteResourceCards = this.props.favoriteResources.map(favorite => <FavoriteCard key={favorite.id} favorite={favorite}/>)
 
         return(
             <div>
-                {FavoriteCards}
+                <h3>Favorite Posts</h3>
+                {FavoritePostCards}
+                <h3>Favorite Resources</h3>
+                {FavoriteResourceCards}
             </div>
         )
     }
@@ -25,7 +30,10 @@ class FavoriteDisplay extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
       loadFavorites: () => {
-          dispatch(fetchFavoritePosts())
+          dispatch(
+              fetchFavoritePosts(),
+              fetchFavoriteResources()
+          )
       }  
     }
 }
@@ -33,7 +41,8 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     // console.log(state.favorites.favoritePosts)
     return {
-        favorites: state.favorites.favoritePosts
+        favoritePosts: state.favoritePosts.favoritePosts, 
+        favoriteResources: state.favoriteResources.favoriteResources
     }
 }
 
