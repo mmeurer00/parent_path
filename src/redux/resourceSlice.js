@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchResources = createAsyncThunk(
-    'posts/fetchResources',
+    'resources/fetchResources',
     async () => {
         //using await instead of then (async events)
         const response = await fetch("http://127.0.0.1:3000/resources")
