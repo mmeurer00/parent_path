@@ -1,6 +1,8 @@
 import React from 'react'
 import NavbarItems from './NavItems'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import './Navbar.css'
+import {Button} from './Button'
 
 const NavbarStyle = styled.p`
     background: linear-gradient(90deg, blue 0%, red 100%);
@@ -33,7 +35,7 @@ class Navbar extends React.Component {
                 <div className="menu-icon" onClick={this.handleClick}>
                 <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
-                <ul>
+                <ul className={this.state.clicked ? 'nav-menu-active' : 'nav-menu'}>
                     {NavbarItems.map((item, index) => {
                         return (
                             <li key={index}>

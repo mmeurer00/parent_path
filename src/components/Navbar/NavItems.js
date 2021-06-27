@@ -2,27 +2,27 @@ const NavbarItems = [
 
 {
     title: 'Home',
-    url: '#',
+    url: '/',
     cName: 'nav-links'
 },
 {
     title: 'Login',
-    url: '#',
+    url: '/login',
     cName: 'nav-links'
 },
 {
     title: 'Resources',
-    url: '#',
+    url: '/resource',
     cName: 'nav-links'
 },
 {
     title: 'Community',
-    url: '#',
+    url: '/community',
     cName: 'nav-links'
 },
 {
     title: 'Favorites',
-    url: '#',
+    url: '/favorites',
     cName: 'nav-links'
 }
 
