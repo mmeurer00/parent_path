@@ -35,7 +35,7 @@ export const createFavoritePosts = createAsyncThunk(
                 headers: {
                     "Content-Type":"application/json"
                 },
-                body: JSON.stringify({favorite: {user_id: 1, post_id: post.id}})
+                body: JSON.stringify({favorite: {user_id: post.user_id, post_id: post.id}})
             })
         const data = await response.json()
         return data

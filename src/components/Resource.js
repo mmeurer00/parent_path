@@ -15,7 +15,7 @@ class Resource extends React.Component {
         
         return (
             <div>
-                <h1>Resources</h1>
+                <h1>Resources For You</h1>
                 {resourceCards}
                 {/* <button onClick={() => (routeInfo.history.push("/"))}>Go Back</button> */}
             </div>
@@ -32,6 +32,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state.resources.all)
     return {
         resources: state.resources.all
     }

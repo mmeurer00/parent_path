@@ -6,12 +6,11 @@ import DisplayResource from './components/DisplayResource';
 import resources from './resource_data.js'
 import Community from './components/Community';
 import Favorite from './components/Favorite';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import FavoriteDisplay from './components/FavoriteDisplay';
-
+import Navbar from './components/Navbar/Navbar'
 class App extends React.Component {
 
   // constructor(){
