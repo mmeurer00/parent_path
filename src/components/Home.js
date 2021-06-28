@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion/Accordion'
+import Carousel from './Carousel/Carousel'
+import CarouselData from './Carousel/CarouselData'
 
 const LeftTextBox = styled.p`
     position: absolute;
@@ -21,9 +23,12 @@ const RightTextBox = styled.p`
     margin: 2rem;`
 
 const CenterTextBox = styled.p`
-    width: 400px;
-    height: 120px;
+    width: 600px;
+    height: 300px;
     margin: auto;
+    align-items: center;
+    justify-content: center;
+    postion: absolute;
     padding: 1px;
     border: 3px solid green;`
 const WelcomeTo = styled.h1`
@@ -57,16 +62,13 @@ const Home = () => {
             <TitleParent>Parent Path</TitleParent>
             <MissionStatement>Guiding families down the path to build healthy environments, 
                 where children can grow to be smart, caring, and confident. </MissionStatement>
-            {/* <CenterTextBox>Center</CenterTextBox> */}
+            <CenterTextBox><Carousel slides={CarouselData}/></CenterTextBox>
             <RightTextBox>
                 Right
             </RightTextBox>
             <Accordion/>
             {/* <LeftTextBox></LeftTextBox> */}
-            <p>For Parents:</p>
-                <p>Child Care Resources</p>
-                <p>Family Fun</p>
-                <p>Education</p>
+            
         </div>
     
     )
