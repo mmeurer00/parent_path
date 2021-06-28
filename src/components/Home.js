@@ -5,12 +5,9 @@ import Carousel from './Carousel/Carousel'
 import CarouselData from './Carousel/CarouselData'
 
 const LeftTextBox = styled.p`
-    position: absolute;
-    left: -10px;
+    float: left;
     width: 200px;
-    height: 120px;
-    border: 3px solid blue;
-    padding: 1;
+    
     margin: 2rem;`
 
 const RightTextBox = styled.p`
@@ -23,14 +20,10 @@ const RightTextBox = styled.p`
     margin: 2rem;`
 
 const CenterTextBox = styled.p`
-    width: 600px;
-    height: 300px;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    postion: absolute;
-    padding: 1px;
-    border: 3px solid green;`
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    `
 const WelcomeTo = styled.h1`
     font-size: 3rem;
     color: blue;
@@ -62,12 +55,14 @@ const Home = () => {
             <TitleParent>Parent Path</TitleParent>
             <MissionStatement>Guiding families down the path to build healthy environments, 
                 where children can grow to be smart, caring, and confident. </MissionStatement>
-            <CenterTextBox><Carousel slides={CarouselData}/></CenterTextBox>
-            <RightTextBox>
-                Right
-            </RightTextBox>
-            <Accordion/>
-            {/* <LeftTextBox></LeftTextBox> */}
+            <CenterTextBox>
+                <Accordion/>
+                <Carousel slides={CarouselData}/>
+                <RightTextBox>
+                <h3>Other Websites</h3>
+                <ul>...</ul>
+                </RightTextBox>
+            </CenterTextBox>
             
         </div>
     

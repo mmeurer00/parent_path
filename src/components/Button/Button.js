@@ -11,7 +11,7 @@ const SIZES = [
 'btn--lg'
 ]
 
-export const Button = ({
+const Button = ({
     children, 
     type,
     onClick,
@@ -32,4 +32,6 @@ return (
     </button>
 
 )}
+
+export default Button
  

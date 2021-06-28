@@ -2,7 +2,6 @@ import React from 'react'
 import NavbarItems from './NavItems'
 import styled from 'styled-components'
 import './Navbar.css'
-import {Button} from './Button'
 
 const NavbarStyle = styled.p`
     background: linear-gradient(90deg, blue 0%, red 100%);

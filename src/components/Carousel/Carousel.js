@@ -30,7 +30,7 @@ const Carousel = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt='travel image' className='image' />
+              <img src={slide.image} alt='children image' className='image' />
             )}
           </div>
         );
