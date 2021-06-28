@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Accordion from './Accordion/Accordion'
 
 const LeftTextBox = styled.p`
     position: absolute;
@@ -56,14 +57,16 @@ const Home = () => {
             <TitleParent>Parent Path</TitleParent>
             <MissionStatement>Guiding families down the path to build healthy environments, 
                 where children can grow to be smart, caring, and confident. </MissionStatement>
-            <CenterTextBox>Center</CenterTextBox>
-            <RightTextBox>Right</RightTextBox>
-            <LeftTextBox>Left</LeftTextBox>
+            {/* <CenterTextBox>Center</CenterTextBox> */}
+            <RightTextBox>
+                Right
+            </RightTextBox>
+            <Accordion/>
+            {/* <LeftTextBox></LeftTextBox> */}
             <p>For Parents:</p>
                 <p>Child Care Resources</p>
                 <p>Family Fun</p>
                 <p>Education</p>
-
         </div>
     
     )
