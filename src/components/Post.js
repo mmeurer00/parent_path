@@ -2,6 +2,16 @@ import React from 'react';
 import PostCard from './PostCard'
 import { connect } from 'react-redux'
 import { fetchPosts } from '../redux/postSlice'
+import Button from './Button/Button'
+import styled from 'styled-components'
+
+const Container = styled.div`
+    position: relative;
+    height: 5rem;
+    margin: 3rem;
+    align-items: 'center';
+    justify-items: 'center';
+`
 
 class Post extends React.Component {
 
@@ -15,8 +25,7 @@ class Post extends React.Component {
         
         return (
             <div>
-                <button>Top Posts</button>
-                search tags
+                <Container><Button>Top Posts</Button></Container>
                 {PostCards}
             </div>
         )

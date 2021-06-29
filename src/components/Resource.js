@@ -2,6 +2,7 @@ import React from 'react';
 import ResourceCard from './ResourceCard'
 import { connect } from 'react-redux'
 import { fetchResources } from '../redux/resourceSlice'
+import GoogleMap from './GoogleMap'
 
 class Resource extends React.Component {
 
@@ -18,6 +19,7 @@ class Resource extends React.Component {
                 <h1>Resources For You</h1>
                 {resourceCards}
                 {/* <button onClick={() => (routeInfo.history.push("/"))}>Go Back</button> */}
+                <GoogleMap />
             </div>
         )
     }

@@ -1,6 +1,28 @@
 import React from 'react';
 import { createPosts } from '../redux/postSlice'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
+
+const CardContainer = styled.div`
+    position: 'center';
+    width:'50%';
+    height:'100%';
+    margin: 3rem;
+    align-items: 'center';
+    justify-items: 'center';
+`
+const Card = styled.div`
+    margin: auto;
+    postion: absolute;
+    width: 25rem;
+    height: 15rem;
+    padding: auto;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 10px 10px 10px grey, -10px -10px 10px grey
+  `
 
 class CommunityForm extends React.Component {
     constructor(props){
@@ -33,6 +55,8 @@ class CommunityForm extends React.Component {
 
     render(){
         return (
+        <CardContainer>
+        <Card>
         <form className="form" onSubmit={(event) => this.handleFormSubmit(event, this.state.formInput)}>
             <h2>Share a Post!</h2>
             <div>
@@ -73,6 +97,8 @@ class CommunityForm extends React.Component {
             </div>
             <input type="submit" value="Create Post" />
         </form>
+        </Card>
+        </CardContainer>
         );
     }
 }
