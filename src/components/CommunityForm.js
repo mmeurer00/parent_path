@@ -2,6 +2,7 @@ import React from 'react';
 import { createPosts } from '../redux/postSlice'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
+import Button from './Button/Button'
 
 const CardContainer = styled.div`
     position: 'center';
@@ -56,7 +57,7 @@ class CommunityForm extends React.Component {
     render(){
         return (
         <CardContainer>
-        <Card>
+        {/* <Card> */}
         <form className="form" onSubmit={(event) => this.handleFormSubmit(event, this.state.formInput)}>
             <h2>Share a Post!</h2>
             <div>
@@ -95,9 +96,9 @@ class CommunityForm extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.formInput.link}/>
             </div>
-            <input type="submit" value="Create Post" />
+            <Button type="submit">Create Post</Button>
         </form>
-        </Card>
+        {/* </Card> */}
         </CardContainer>
         );
     }

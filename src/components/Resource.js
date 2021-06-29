@@ -3,6 +3,13 @@ import ResourceCard from './ResourceCard'
 import { connect } from 'react-redux'
 import { fetchResources } from '../redux/resourceSlice'
 import GoogleMap from './GoogleMap'
+import styled from 'styled-components'
+
+const MapContainer = styled.div`
+    margin: 'auto';
+    padding: '3rem';
+    position: 'absolute'
+`
 
 class Resource extends React.Component {
 
@@ -18,8 +25,10 @@ class Resource extends React.Component {
             <div>
                 <h1>Resources For You</h1>
                 {resourceCards}
+                <MapContainer>
+                    <GoogleMap/>
+                </MapContainer>
                 {/* <button onClick={() => (routeInfo.history.push("/"))}>Go Back</button> */}
-                <GoogleMap />
             </div>
         )
     }

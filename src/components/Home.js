@@ -50,7 +50,7 @@ const MissionStatement = styled.h4`
 
 const Home = () => {
     return (
-    <div>
+        <div>
             <WelcomeTo>Welcome to</WelcomeTo> 
             <TitleParent>Parent Path</TitleParent>
             <MissionStatement>Guiding families down the path to build healthy environments, 
@@ -59,13 +59,11 @@ const Home = () => {
                 <Accordion/>
                 <Carousel slides={CarouselData}/>
                 <RightTextBox>
-                <h3>Other Websites</h3>
-                <ul>...</ul>
+                    <h3>Other Websites</h3>
+                    <ul>...</ul>
                 </RightTextBox>
             </CenterTextBox>
-            
         </div>
-    
     )
 }
 

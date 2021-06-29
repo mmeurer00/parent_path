@@ -5,7 +5,8 @@ const FavoriteCard = ({favorite}) => {
         <div className="card">
             <div className="card__content">
                 <div className="card__header"></div>
-                    <p>{favorite.id}</p>
+                    <h1>{favorite.id}</h1>
+                    <p></p>
             </div>
         </div>
     )

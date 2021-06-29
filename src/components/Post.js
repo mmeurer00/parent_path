@@ -25,7 +25,6 @@ class Post extends React.Component {
         
         return (
             <div>
-                <Container><Button>Top Posts</Button></Container>
                 {PostCards}
             </div>
         )
