@@ -27,14 +27,17 @@ const Card = styled.div`
     box-shadow: 25px 25px 50px grey, -25px -25px 50px grey
   `
 const CardContent = styled.div`
-    postion: 'absolute';
-    margin: 'auto';
+    postion: absolute;
+    margin: auto;
 `
 const CardHeader = styled.h2`
-text-transform: 'uppercase;
+    text-transform: uppercase;
     font-size: 30px;
 `
-
+const Link = styled.p`
+    margin: .5rem;
+    font-size: 1.5 rem
+`
 class PostCard extends React.Component {
 
     componentDidMount(){
@@ -56,15 +59,16 @@ class PostCard extends React.Component {
         const liked = false
         return (
             <CardContainer>
-            <Card>
-                <CardContent>
-                    <div className="card__header">{this.props.post.title}</div>
-                        <div className="card__info">
-                            <p>{this.props.post.content}</p><p>{this.props.post.link}</p>
-        <Button onClick={() => (this.handleFavoriteClick, liked)} className="card__button">Like</Button>
-                        </div>
-                </CardContent>
-            </Card>
+                <Card>
+                    <CardContent>
+                        <div className="card__header">{this.props.post.title}</div>
+                            <div className="card__info">
+                                <p>{this.props.post.content}</p>
+                                <Link className="link">{this.props.post.link}</Link>
+                                <Button onClick={() => (this.handleFavoriteClick, liked)} className="card__button">Like</Button>
+                            </div>
+                    </CardContent>
+                </Card>
             </CardContainer>
         )
     }

@@ -5,10 +5,21 @@ import { fetchResources } from '../redux/resourceSlice'
 import GoogleMap from './GoogleMap'
 import styled from 'styled-components'
 
+const Title = styled.h1`
+    margin: 2rem;
+    justify-content: 'center';
+    font-size: 3rem;
+`
+
 const MapContainer = styled.div`
-    margin: 'auto';
-    padding: '3rem';
-    position: 'absolute'
+    margin: auto;
+`
+
+const Wrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
 `
 
 class Resource extends React.Component {
@@ -23,8 +34,11 @@ class Resource extends React.Component {
         
         return (
             <div>
-                <h1>Resources For You</h1>
+                <Title>Child Resources</Title>
+                
+                <Wrapper>
                 {resourceCards}
+                </Wrapper>
                 <MapContainer>
                     <GoogleMap/>
                 </MapContainer>

@@ -33,3 +33,17 @@ form {
   font-size: px;
 }
 
+.link {
+  padding: 8px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.link:hover{
+  padding: 8px 20px;
+  transition: all 0.3s ease-in-out;
+  color: purple;
+  transition: 250ms;
+  font-weight: 500;
+}
+
