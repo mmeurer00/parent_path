@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { createFavoritePosts } from '../redux/favoriteSlice'
 import { deleteFavoritePosts } from '../redux/favoriteSlice'
+import { fetchFavorites } from '../redux/favoriteSlice'
 import styled from 'styled-components'
 import Button from './Button/Button'
 
@@ -36,27 +37,23 @@ text-transform: 'uppercase;
 
 class PostCard extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-          liked: false
-        }
-      }
+    componentDidMount(){
+        this.props.loadFavorites()
+    }
 
-    handleFavoriteClick = (event) => {
+    handleFavoriteClick = (event, liked) => {
         event.preventDefault()
-        this.setState({
-            liked: !this.state.liked
-          })
-        if (this.state.liked === true)
+        // this.setState({
+        //     liked: !this.state.liked
+        //   }) 
+        if (liked === true)
             this.props.addFavoritePost(this.props.post)
         else 
-            this.props.deleteFavoritePost(this.props.post)
+            this.props.deleteFavoritePost(this.props.post, this.props.favorites)
     }
 
     render(){
-        const text = this.state.liked ? 'Like' : 'Unlike'
-
+        const liked = false
         return (
             <CardContainer>
             <Card>
@@ -64,7 +61,7 @@ class PostCard extends React.Component {
                     <div className="card__header">{this.props.post.title}</div>
                         <div className="card__info">
                             <p>{this.props.post.content}</p><p>{this.props.post.link}</p>
-        <Button onClick={this.handleFavoriteClick} className="card__button">{text}</Button>
+        <Button onClick={() => (this.handleFavoriteClick, liked)} className="card__button">Like</Button>
                         </div>
                 </CardContent>
             </Card>
@@ -79,13 +76,22 @@ const mapDispatchToProps = (dispatch) => {
         addFavoritePost: (post) => {
             dispatch(createFavoritePosts(post))
         },
-        deleteFavoritePost: (post) => {
-            dispatch(deleteFavoritePosts(post))
+        deleteFavoritePost: (post, favorites) => {
+            dispatch(deleteFavoritePosts(post, favorites))
+        },
+        loadFavorites: () => {
+            dispatch(fetchFavorites()) 
         }
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        favorites: state.favorites.all
+    }
+}
+
  
-export default connect(null, mapDispatchToProps)(PostCard)
+export default connect(mapStateToProps, mapDispatchToProps)(PostCard)
 
 

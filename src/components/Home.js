@@ -60,7 +60,7 @@ const Home = () => {
                 <Carousel slides={CarouselData}/>
                 <RightTextBox>
                     <h3>Other Websites</h3>
-                    <ul>...</ul>
+                        <ul>...</ul>
                 </RightTextBox>
             </CenterTextBox>
         </div>

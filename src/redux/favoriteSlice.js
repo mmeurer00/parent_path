@@ -44,14 +44,13 @@ export const createFavoritePosts = createAsyncThunk(
 
 export const deleteFavoritePosts = createAsyncThunk(
     'favorites/deleteFavoritePosts',
-    async (post) => {
-        const response = await fetch(`http://127.0.0.1:3000/users/1/favorites`,
+    async (post, favorites) => {
+        const favorite = favorites.filter((favorite) => favorite.post_id === post.id) 
+        const id = favorite.id
+        console.log(id)
+        const response = await fetch(`http://127.0.0.1:3000/users/${post.user_id}/favorites/${id}`,
             {
-                method: "DELETE",
-                headers: {
-                    "Content-Type":"application/json"
-                },
-                body: JSON.stringify({favorite: {user_id: post.user_id, post_id: post.id}})
+                method: "DELETE"
             })
         const data = await response.json()
         return data
@@ -85,8 +84,7 @@ const favoriteSlice = createSlice({
             state.all.push(action.payload)
         })
         .addCase(deleteFavoritePosts.fulfilled, (state, action) => {
-            state.all.filter(({id}) => id != action.payload)
-
+            state.all.filter((favorite) => favorite.post_id !== action.payload.post_id)
             // const index = action.payload
             // const post = state[index]
             // return [...state.slice(0, index), post, ...state.slice(index + 1)]
