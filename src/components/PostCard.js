@@ -24,7 +24,7 @@ const Card = styled.div`
     background: #ffffff;
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 25px 25px 50px grey, -25px -25px 50px grey
+    box-shadow:  0 2px 20px gray
   `
 const CardContent = styled.div`
     postion: absolute;

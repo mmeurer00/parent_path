@@ -5,12 +5,13 @@ import Button from './Button/Button'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    height: 5rem;
-    margin: 3rem;
-    align-items: 'center';
+    margin: auto;
+    align-items: center;
 `
-
-
+const Title = styled.h1`
+    justify-content: center;
+    font-size: 3rem;
+`
 function Community() {
 
     const [showModal, setShowModal] = useState(false)
@@ -21,11 +22,11 @@ function Community() {
 
     return (
         <div>
-            <h1>Community!</h1>
+            <Title>Community Post Feed</Title>
             <Modal showModal={showModal} setShowModal={setShowModal}/>
             <Container>
                 <Button onClick={openModal}>Share Post</Button>
-                <Button>Top Posts</Button>
+                {/* <Button>Top Posts</Button> */}
             </Container>
             <Post />
         </div>
