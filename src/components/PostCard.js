@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createFavoritePosts } from '../redux/favoriteSlice'
-import { deleteFavoritePosts } from '../redux/favoriteSlice'
-import { fetchFavorites } from '../redux/favoriteSlice'
+import { deleteFavoritePosts } from '../redux/favoriteSlice' 
 import styled from 'styled-components'
 import Button from './Button/Button'
 
@@ -24,7 +23,7 @@ const Card = styled.div`
     background: #ffffff;
     border-radius: 10px;
     padding: 2rem;
-    box-shadow:  0 2px 20px gray
+    box-shadow: 25px 25px 50px grey, -25px -25px 50px grey
   `
 const CardContent = styled.div`
     postion: absolute;
@@ -40,23 +39,23 @@ const Link = styled.p`
 `
 class PostCard extends React.Component {
 
-    componentDidMount(){
-        this.props.loadFavorites()
-    }
+    constructor() {
+        super();
+        this.state = {
+          liked: false
+        }
+      }
 
-    handleFavoriteClick = (event, liked) => {
+    handleFavoriteClick = (event) => {
+        console.log("console 1")
         event.preventDefault()
-        // this.setState({
-        //     liked: !this.state.liked
-        //   }) 
-        if (liked === true)
-            this.props.addFavoritePost(this.props.post)
-        else 
-            this.props.deleteFavoritePost(this.props.post, this.props.favorites)
+        this.setState({
+            liked: !this.state.liked
+          }) 
+        this.props.addFavoritePost(this.props.post)
     }
 
     render(){
-        const liked = false
         return (
             <CardContainer>
                 <Card>
@@ -65,10 +64,10 @@ class PostCard extends React.Component {
                             <div className="card__info">
                                 <p>{this.props.post.content}</p>
                                 <Link className="link">{this.props.post.link}</Link>
-                                <Button onClick={() => (this.handleFavoriteClick, liked)} className="card__button">Like</Button>
+                                <Button onClick={this.handleFavoriteClick} className="card__button">Like</Button>
                             </div>
                     </CardContent>
-                </Card>
+            </Card>
             </CardContainer>
         )
     }
@@ -78,24 +77,21 @@ class PostCard extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         addFavoritePost: (post) => {
-            dispatch(createFavoritePosts(post))
-        },
-        deleteFavoritePost: (post, favorites) => {
-            dispatch(deleteFavoritePosts(post, favorites))
-        },
-        loadFavorites: () => {
-            dispatch(fetchFavorites()) 
-        }
+            dispatch(createFavoritePosts(post))}
+        // },
+        // deleteFavoritePost: (post, favorites) => {
+        //     dispatch(deleteFavoritePosts(post, favorites))
+        // }
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        favorites: state.favorites.all
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         favorites: state.favorites.all
+//     }
+// }
 
  
-export default connect(mapStateToProps, mapDispatchToProps)(PostCard)
+export default connect(null, mapDispatchToProps)(PostCard)
 
 

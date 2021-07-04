@@ -13,25 +13,25 @@ class FavoriteCard extends React.Component {
     }
 
     render(){
-        console.log(this.props.posts)
-        // console.log("asdfasdf")
-        // // console.log(this.props.posts)
-        // // function favoritePost(favorite) {
-        // //     this.props.posts.map(post => post.id == favorite.post_id)
-        // // }
-        // let test = this.props.posts
-        // console.log(test)
-        let post = []
-        post.concat(this.props.posts.filter(post => post.id == this.props.favorite.post_id))
-        console.log(post)
-        // const favPost = favPosts.map(post => post.title)
         
+        // console.log(this.props.posts)
+       
+        let favPost = {}
+        let postIt = this.props.posts.map(post => {
+            if(post.id == this.props.favorite.post_id)
+                return favPost = {
+                    title: post.title, 
+                    content: post.content
+                }
+        })
+            
         return (
             <div className="card">
                 <div className="card__content">
                     <div className="card__header"></div>
                         <h1>{this.props.favorite.id}</h1>
-                        <p></p>
+                        <p>{favPost.title}</p>
+                        <p>{favPost.content}</p>
                 </div>
             </div>
         )
