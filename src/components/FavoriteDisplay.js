@@ -23,7 +23,7 @@ class FavoriteDisplay extends React.Component {
 
         return(
             <div>
-                <h3>Favorite Posts</h3>
+                <h2>Favorite Posts</h2>
                 {FavoritePostCards}
             </div>
         )
