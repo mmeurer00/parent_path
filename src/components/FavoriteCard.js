@@ -48,8 +48,8 @@ class FavoriteCard extends React.Component {
         // console.log(this.props.posts)
        
         let favPost = {}
-        let postIt = this.props.posts.map(post => {
-            if(post.id == this.props.favorite.post_id)
+        this.props.posts.map(post => {
+            if(post.id === this.props.favorite.post_id)
                 return favPost = {
                     title: post.title, 
                     content: post.content,

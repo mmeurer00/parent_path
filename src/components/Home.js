@@ -4,13 +4,7 @@ import Accordion from './Accordion/Accordion'
 import Carousel from './Carousel/Carousel'
 import CarouselData from './Carousel/CarouselData'
 
-const LeftTextBox = styled.p`
-    float: left;
-    width: 200px;
-    
-    margin: 2rem;`
-
-const RightTextBox = styled.p`
+const RightTextBox = styled.div`
     position: absolute;
     right: -10px;
     width: 200px;
@@ -19,7 +13,7 @@ const RightTextBox = styled.p`
     padding: 1;
     margin: 2rem;`
 
-const CenterTextBox = styled.p`
+const CenterTextBox = styled.div`
     flex-wrap: nowrap;
     display: flex;
     flex-direction: row;

@@ -3,7 +3,7 @@ import NavbarItems from './NavItems'
 import styled from 'styled-components'
 import './Navbar.css'
 
-const NavbarStyle = styled.p`
+const NavbarStyle = styled.div`
     background: linear-gradient(90deg, blue 0%, red 100%);
     height: 90px;
     display: flex;
@@ -11,7 +11,7 @@ const NavbarStyle = styled.p`
     align-items: center;
     1.2 rem;
 `
-const NavbarLogo = styled.p`
+const NavbarLogo = styled.div`
     color: white;
     justify-self: start;
     margin-left: 20 px;

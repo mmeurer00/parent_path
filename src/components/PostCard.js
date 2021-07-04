@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createFavoritePosts } from '../redux/favoriteSlice'
-import { deleteFavoritePosts } from '../redux/favoriteSlice' 
+import { createFavoritePosts } from '../redux/favoriteSlice' 
 import styled from 'styled-components'
 import Button from './Button/Button'
 
@@ -29,10 +28,6 @@ const CardContent = styled.div`
     postion: absolute;
     margin: auto;
 `
-const CardHeader = styled.h2`
-    text-transform: uppercase;
-    font-size: 30px;
-`
 const Link = styled.p`
     margin: .5rem;
     font-size: 1.5 rem
@@ -56,15 +51,16 @@ class PostCard extends React.Component {
     }
 
     render(){
+        const text = this.state.liked ? 'Liked' : 'Like'
         return (
             <CardContainer>
                 <Card>
                     <CardContent>
                         <div className="card__header">{this.props.post.title}</div>
                             <div className="card__info">
-                                <p>{this.props.post.content}</p>
+                                <div>{this.props.post.content}</div>
                                 <Link className="link">{this.props.post.link}</Link>
-                                <Button onClick={this.handleFavoriteClick} className="card__button">Like</Button>
+                                <Button onClick={this.handleFavoriteClick} className="card__button">{text}</Button>
                             </div>
                     </CardContent>
             </Card>

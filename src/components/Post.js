@@ -2,16 +2,6 @@ import React from 'react';
 import PostCard from './PostCard'
 import { connect } from 'react-redux'
 import { fetchPosts } from '../redux/postSlice'
-import Button from './Button/Button'
-import styled from 'styled-components'
-
-const Container = styled.div`
-    position: relative;
-    height: 5rem;
-    margin: 3rem;
-    align-items: 'center';
-    justify-items: 'center';
-`
 
 class Post extends React.Component {
 
@@ -46,11 +36,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post)
-
-
-
-// handleFavorite = (event, post) => {
-//     event.preventDefault()
-//     console.log(event.target)
-//    this.props.addFavorite(post)
-// }

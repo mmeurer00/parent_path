@@ -60,15 +60,15 @@ const Dropdown = styled.div`
 `
 
 const Accordion = () => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(false)
 
   const toggle = index => {
     if (clicked === index) {
       //if clicked question is already active, then close it
-      return setClicked(null);
+      return setClicked(null)
     }
 
-    setClicked(index);
+    setClicked(index)
   };
 
   return (
@@ -78,9 +78,11 @@ const Accordion = () => {
           {Data.map((item, index) => {
             return (
               <>
-                <Wrap onClick={() => toggle(index)} key={index}>
+                <Wrap onClick={() => toggle(index)}>
+                  <li key={index}>
                   <h1>{item.question}</h1>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  </li>
                 </Wrap>
                 {clicked === index ? (
                   <Dropdown>
@@ -88,12 +90,12 @@ const Accordion = () => {
                   </Dropdown>
                 ) : null}
               </>
-            );
+            )
           })}
         </Container>
       </AccordionSection>
     </IconContext.Provider>
-  );
-};
+  )
+}
 
 export default Accordion;
