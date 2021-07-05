@@ -43,8 +43,8 @@ const Wrap = styled.div`
 `
 
 const Dropdown = styled.div`
-  background: blue;
-  color: #00ffb9;
+  background: white;
+  color: purple;
 //   width: 100%;
   width: 25rem;
   height: 100px;
@@ -52,8 +52,8 @@ const Dropdown = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #00ffb9;
-  border-top: 1px solid #00ffb9;
+  border-bottom: 1px solid blue;
+  border-top: 1px solid blue;
   p {
     font-size: 1.2rem;
   }
@@ -78,11 +78,9 @@ const Accordion = () => {
           {Data.map((item, index) => {
             return (
               <>
-                <Wrap onClick={() => toggle(index)}>
-                  <li key={index}>
+                <Wrap onClick={() => toggle(index)} key={index}>
                   <h1>{item.question}</h1>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                  </li>
                 </Wrap>
                 {clicked === index ? (
                   <Dropdown>

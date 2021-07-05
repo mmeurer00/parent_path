@@ -87,7 +87,9 @@ const Modal = ({ showModal, setShowModal }) => {
             <animated.div style={animation}>
                 <ModalWrapper showModal={showModal}>
                     <ModalContent>
+                        <div>
                         < CommunityForm />
+                        </div>
                     </ModalContent>
                     <CloseModalButton
                     aria-label='Close modal'

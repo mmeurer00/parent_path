@@ -1,4 +1,5 @@
 import React from 'react'
+// import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createFavoriteResources } from '../redux/favoriteSlice'
 import styled from 'styled-components'
@@ -42,7 +43,9 @@ class ResourceCard extends React.Component {
                 <Name>{this.props.resource.name}</Name>
                 <Location>{this.props.resource.location}</Location>
                 <Description>{this.props.resource.description}
-                    <Link className='link'>{this.props.resource.link}</Link>
+                    <Link className='link' onClick={window.open(`${this.props.resource.link}`), '_blank'} >
+                        {this.props.resource.link}
+                        </Link>
                 </Description>
                 {/* <button onClick={this.handleFavoriteClick} >Favorite</button> */}
             </Card>
