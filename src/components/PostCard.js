@@ -59,7 +59,9 @@ class PostCard extends React.Component {
                         <div className="card__header">{this.props.post.title}</div>
                             <div className="card__info">
                                 <div>{this.props.post.content}</div>
-                                <Link className="link">{this.props.post.link}</Link>
+                                <Link className="link" onClick={() => window.location.href = `${this.props.post.link}`}>
+                                    {this.props.post.link}
+                                </Link>
                                 <Button onClick={this.handleFavoriteClick} className="card__button">{text}</Button>
                             </div>
                     </CardContent>

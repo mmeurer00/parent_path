@@ -21,7 +21,7 @@ class CommunityForm extends React.Component {
                 title: "",
                 content: "",
                 tag: "",
-                location: "",
+                link: "https://",
                 user_id: 1    },
             posts: []
         }
