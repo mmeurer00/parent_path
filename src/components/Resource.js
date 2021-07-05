@@ -9,6 +9,7 @@ const Title = styled.h1`
     margin: 2rem;
     justify-content: 'center';
     font-size: 3rem;
+    color: blue;
 `
 
 const MapContainer = styled.div`
@@ -34,7 +35,7 @@ class Resource extends React.Component {
         
         return (
             <div>
-                <Title>Child Resources</Title>
+                <Title>Family Resources</Title>
                 
                 <Wrapper>
                 {resourceCards}

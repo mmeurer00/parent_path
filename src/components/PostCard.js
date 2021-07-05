@@ -13,6 +13,7 @@ const CardContainer = styled.div`
     justify-items: 'center';
 `
 const Card = styled.div`
+    overflow: scroll;
     margin: auto;
     postion: absolute;
     width: 30rem;

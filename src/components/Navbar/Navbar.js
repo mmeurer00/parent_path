@@ -30,7 +30,7 @@ class Navbar extends React.Component {
     render(){
         return(
             <NavbarStyle>
-                <NavbarLogo>LOGO</NavbarLogo>
+                <NavbarLogo>Parent Path</NavbarLogo>
                 <div className="menu-icon" onClick={this.handleClick}/>
                     <ul className={this.state.clicked ? 'nav-menu-active' : 'nav-menu'}>
                         {NavbarItems.map((item, index) => {

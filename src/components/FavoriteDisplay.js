@@ -11,19 +11,10 @@ class FavoriteDisplay extends React.Component {
     }
 
     render(){
-        console.log("asdf")
-        // console.log(this.props.posts)
-        // const favPosts = (favorite) => { this.props.posts.filter(post => post.id === favorite.post_id) }
-        // let favPosts2 = this.props.posts.filter(post => post.id == favorite.post_id)
-        // console.log(favPosts)
         const FavoritePostCards = this.props.favorites.map(favorite => <FavoriteCard key={favorite.id} favorite={favorite}/>)
-
-        // const loadedPosts = this.props.posts
-        // console.log(loadedPosts)
 
         return(
             <div>
-                <h2>Favorite Posts</h2>
                 {FavoritePostCards}
             </div>
         )
