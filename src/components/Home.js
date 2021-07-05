@@ -7,9 +7,8 @@ import CarouselData from './Carousel/CarouselData'
 const RightTextBox = styled.div`
     position: absolute;
     right: -10px;
-    width: 200px;
-    height: 120px;
-    border: 3px solid blue;
+    width: 300px;
+    height: 300px;
     padding: 1;
     margin: 2rem;`
 
@@ -25,6 +24,14 @@ const WelcomeTo = styled.h1`
     padding: 1;
     margin: .5rem;
     position: relative;`
+
+const TitleRight = styled.h2`
+    font-size: 2rem;
+    color: blue;
+    padding: 1;
+    margin: .5rem;
+    position: relative;
+`
 
 const TitleParent = styled.h1`
     font-size: 4rem;
@@ -53,8 +60,16 @@ const Home = () => {
                 <Accordion/>
                 <Carousel slides={CarouselData}/>
                 <RightTextBox>
-                    <h3>Other Websites</h3>
-                        <ul>...</ul>
+                    <TitleRight>Government Funded Programs</TitleRight>
+                        <div>
+                            <a href='https://www.hhs.gov'>Human & Helth Resources</a>
+                        </div>
+                        <div>
+                            <a href='https://eclkc.ohs.acf.hhs.gov/programs/article/early-head-start-programs'>Early Heard Start Programs</a>
+                        </div>
+                        <div>
+                            <a href='https://chadd.org/'>The National Resource Center on ADHD</a>
+                        </div>
                 </RightTextBox>
             </CenterTextBox>
         </div>
