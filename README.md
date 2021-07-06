@@ -30,10 +30,13 @@ user@Users-MacBook_Air parent_path %
 user@Users-MacBook_Air parent_path % npm install //OR yarn install
 ```
 7. Next type in the console 'npm start' or 'yarn start' dependind on how you installed it.
+
 ```
 user@Users-MacBook_Air parent_path % npm start //OR yarn start
 ```
-    *You may be prompted with a question in yout terminal, like the following:*
+
+
+*You may be prompted with a question in yout terminal, like the following:*
 
     ```
     ? Something is already running on port 3000. Probably:
@@ -43,7 +46,7 @@ user@Users-MacBook_Air parent_path % npm start //OR yarn start
     Would you like to run the app on another port instead? › (Y/n)
 
     ```
-    *just press 'y' (yes).*
+*just press 'y' (yes).*
 
 Congrats 🎉  you can now find awesome family/child resources! 
 
