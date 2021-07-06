@@ -38,14 +38,14 @@ user@Users-MacBook_Air parent_path % npm start //OR yarn start
 
 *You may be prompted with a question in yout terminal, like the following:*
 
-    ```
+    
     ? Something is already running on port 3000. Probably:
     puma 5.3.2 (tcp://localhost:3000) [parent_path_backend]   (pid 38234)
     in /Users/Users-MacBook_Air/parent_path_backend
 
     Would you like to run the app on another port instead? › (Y/n)
 
-    ```
+    
 *just press 'y' (yes).*
 
 Congrats 🎉  you can now find awesome family/child resources! 
