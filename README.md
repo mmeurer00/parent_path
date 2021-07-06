@@ -1,4 +1,4 @@
-## <h1>🌱 Parent Path 📈</h1>
+## <h1>👪 Parent Path 👶</h1>
 
  Parent Path is a React Redux application, allowing users to find resources for families. As well as make posts to notify other parents about resources/opportunities found for families, and save other posts.  Parent Path's Frontend consitsts of HTML, CSS, and React.js with Redux, while communicating with an Ruby on Rails API [backend](https://github.com/mmeurer00/parent_path_backend).
 
