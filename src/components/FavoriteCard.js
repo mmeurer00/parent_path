@@ -44,8 +44,6 @@ class FavoriteCard extends React.Component {
     }
 
     render(){
-        
-        // console.log(this.props.posts)
        
         let favPost = {}
         this.props.posts.map(post => {

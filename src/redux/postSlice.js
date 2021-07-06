@@ -70,31 +70,5 @@ const postSlice = createSlice({
 
 })
 
-// export const favoritePostSlice = createSlice({
-//     name: 'favoritePosts',
-//     initialState: {
-//         favoritePosts: [],
-//        loading: false,
-//     },
-
-//     reducers: {
-//         startLoadingFavorites(state, action) {
-//             state.loading = true
-//         },
-//         endLoadingFavorites(state, action){
-//             state.loading = false
-//         }
-//     },
-//     extraReducers: (builder) => {
-//         builder.addCase(createFavoritePosts.fulfilled, (state, action) => {
-//             state.favoritePosts.push(action.payload)
-//         })
-//     }
-// })
-
-
-console.log(postSlice)
 export  const {startLoading, endLoading} = postSlice.actions
 export default postSlice.reducer 
-// export  const {startLoadingFavorites, endLoadingFavorites} = favoritePostSlice.actions
-// export const favoritePostsReducer = favoritePostSlice.reducer

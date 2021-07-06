@@ -8,10 +8,10 @@ const Container = styled.div`
     margin: 2rem;
     align-items: center;
 `
-const Title = styled.h1`
-    justify-content: center;
-    font-size: 3rem;
-`
+// const Title = styled.h1`
+//     justify-content: center;
+//     font-size: 3rem;
+// `
 function Community() {
 
     const [showModal, setShowModal] = useState(false)

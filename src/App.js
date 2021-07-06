@@ -8,29 +8,13 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar'
 class App extends React.Component {
 
-  // constructor(){
-  //   super()
-  //   this.state = {
-  //       resources: []
-  //   } 
-  // }
-
-  // componentDidMount(){
-  //     fetch("http://127.0.0.1:3000/resources")
-  //     .then(r=>r.json())
-  //     .then(resources => this.setState({resources: resources}))
-  //     // this.setState({
-  //     //     resources: resources
-  //     // })
-  // }
-
 render(){
   return (
   <div className="App">
     <Router >
       <Navbar />
       <Route exact path="/" component={Home} />
-      {/* <Route exact path="/login" component={Login} /> */}
+      {/* <Route exact path="/login" component={LoginForm} /> */}
       <Route exact path="/resource" component={Resource} />
       <Route exact path="/community" component={Community} />
       <Route exact path="/favorites" component={Favorite} />

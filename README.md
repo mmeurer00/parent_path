@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## <h1>🌱 Parent Path 📈</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ Parent Path is a React Redux application, allowing users to find resources for families. As well as make posts to notify other parents about resources/opportunities found for families, and save other posts.  Parent Path's Frontend consitsts of HTML, CSS, and React.js with Redux, while communicating with an Ruby on Rails API [backend](https://github.com/mmeurer00/parent_path_backend).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+## <h2>Installation Instructions 📲</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users can access Parent Path **(Frontend)** by cloning this repository.
 
-### `yarn test`
+1. Scroll up and find the green "Code" button:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Click it, and a tab should drop down including a github link (make sure to select the one under SSH).
 
-### `yarn build`
+3. Manually copy or click the clipboard icon to copy the link.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. In the user terminal enter 'git clone':
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+user@Users-MacBook_Air % git clone [paste link]
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Navigate to the parent_path file.
+```
+user@Users-MacBook_Air parent_path % 
+```
+6. Once inside parent_path, open the application in your browser by typing 'npm install' or 'yarn install' in your terminal:
+```
+user@Users-MacBook_Air parent_path % npm install //OR yarn install
+```
+7. Next type in the console 'npm start' or 'yarn start' dependind on how you installed it.
+```
+user@Users-MacBook_Air parent_path % npm start //OR yarn start
+```
+    *You may be prompted with a question in yout terminal, like the following:*
 
-### `yarn eject`
+    ```
+    ? Something is already running on port 3000. Probably:
+    puma 5.3.2 (tcp://localhost:3000) [parent_path_backend]   (pid 38234)
+    in /Users/Users-MacBook_Air/parent_path_backend
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    Would you like to run the app on another port instead? › (Y/n)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```
+    *just press 'y' (yes).*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Congrats 🎉  you can now find awesome family/child resources! 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+*Note: If you have not yet cloned and opened the rails server from Parent Path [Backend](https://github.com/mmeurer00/parent_path_backend), the application will not work properly.*
 
-## Learn More
+## <h2>Contributing 🥰 </h2> 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Since this application was primarily made for educational purposes, anyone is welcome to contribute. Make sure any pull requests have meaningfully commit messages that accurately and completely describe any changes. Do not include any changes that are not in the commit message.
 
-### Code Splitting
+Bug reports and pull requests are welcome on GitHub at https://github.com/mmeurer00/parent_path. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## <h2>License 🔗 </h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[MIT](https://github.com/mmeurer00/parent_path/blob/main/LICENSE)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## <h2>Code of Conduct ✌</h2>
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Everyone interacting in the Parent Paths' project’s codebases, issue trackers, posts and users are expected to follow the code of conduct.
