@@ -58,7 +58,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.resources.all)
     return {
         resources: state.resources.all
     }
