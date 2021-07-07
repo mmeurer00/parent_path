@@ -83,8 +83,8 @@ const Accordion = () => {
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </Wrap>
                 {clicked === index ? (
-                  <Dropdown>
-                    <p>{item.answer}</p>
+                  <Dropdown key={index}>
+                    <p>{item.answer} </p>
                   </Dropdown>
                 ) : null}
               </>

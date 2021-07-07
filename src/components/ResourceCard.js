@@ -18,14 +18,14 @@ const Card = styled.div`
 const Name = styled.h2`
     margin: 1rem;
 `
-const Description = styled.p`
+const Description = styled.div`
     margin: .5rem;
     font-size: 1.5 rem
 `
-const Location = styled.p`
+const Location = styled.div`
     font-size: 1.5 rem
 `
-const Link = styled.p`
+const Link = styled.div`
     margin: .5rem;
     font-size: 1 rem
 `

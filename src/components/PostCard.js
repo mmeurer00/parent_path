@@ -43,7 +43,7 @@ class PostCard extends React.Component {
       }
 
     handleFavoriteClick = (event) => {
-        console.log("console 1")
+        console.log("saved")
         event.preventDefault()
         this.setState({
             liked: !this.state.liked
@@ -52,7 +52,7 @@ class PostCard extends React.Component {
     }
 
     render(){
-        const text = this.state.liked ? 'Liked' : 'Like'
+        const text = this.state.liked ? 'Saved' : 'Save'
         return (
             <CardContainer>
                 <Card>
@@ -77,18 +77,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addFavoritePost: (post) => {
             dispatch(createFavoritePosts(post))}
-        // },
-        // deleteFavoritePost: (post, favorites) => {
-        //     dispatch(deleteFavoritePosts(post, favorites))
-        // }
     }
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//         favorites: state.favorites.all
-//     }
-// }
 
  
 export default connect(null, mapDispatchToProps)(PostCard)

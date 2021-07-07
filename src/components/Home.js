@@ -57,7 +57,7 @@ const Home = () => {
             <MissionStatement>Guiding families down the path to build healthy environments, 
                 where children can grow to be smart, caring, and confident. </MissionStatement>
             <CenterTextBox>
-                <Accordion/>
+                <Accordion />
                 <Carousel slides={CarouselData}/>
                 <RightTextBox>
                     <TitleRight>Government Funded Programs</TitleRight>
